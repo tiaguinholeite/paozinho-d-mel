@@ -62,9 +62,10 @@ export default function HomeView() {
           <PokemonCard pokemon={pokemon} />
         </div>
       )}
+      <FavoriteSidebar />
     </div> 
     //<FavoriteSidebar />
 
     
-  );
+  ); 
 }

@@ -1,9 +1,12 @@
+// src/views/HomeView.jsx
 import { useState } from 'react';
 import axios from 'axios';
 import PokemonCard from '../components/PokemonCard';
 import { Link } from 'react-router-dom';
 
-export default function Home() {
+import FavoriteSidebar from '../components/FavoriteSidebar';
+
+export default function HomeView() {
   const [pokemon, setPokemon] = useState(null);
   const [inputId, setInputId] = useState('');
   const [loading, setLoading] = useState(false);
@@ -30,7 +33,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-6">
       <div className="text-center mb-10">
         <h1 className="text-5xl font-bold text-purple-300 mb-4">Buscar Pokémon</h1>
-        <p className="text-lg text-gray-300 mb-4">Digite o nome ou ID do Pokémon para ver os detalhes</p>
+        <p className="text-lg text-gray-300 mb-4">Digite o nome ou ID do Pokémon</p>
         <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
           <input
             type="text"
@@ -59,6 +62,9 @@ export default function Home() {
           <PokemonCard pokemon={pokemon} />
         </div>
       )}
-    </div>
+    </div> 
+    //<FavoriteSidebar />
+
+    
   );
 }

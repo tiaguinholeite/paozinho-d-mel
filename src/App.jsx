@@ -1,14 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import AllPokemons from './pages/Poke/AllPokemons';
+import HomeView from './views/HomeView';
+import AllPokemonsView from './views/AllPokemonsView';
 
-function App() {
+export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/todos" element={<AllPokemons />} />
+      <Route path="/" element={<HomeView />} />
+      <Route path="/todos" element={<AllPokemonsView />} />
     </Routes>
   );
 }
-
-export default App;
